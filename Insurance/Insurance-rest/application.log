@@ -1,0 +1,16 @@
+"2020-09-25 [task-1] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+""2020-09-25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-09-25 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""2020-09-25 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 6 mappings in 'requestMappingHandlerMapping'
+""2020-09-25 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""2020-09-25 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""2020-09-25 [RMI TCP Connection(96)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""2020-09-25 [RMI TCP Connection(96)-127.0.0.1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""2020-09-25 [RMI TCP Connection(96)-127.0.0.1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""2020-09-25 [RMI TCP Connection(96)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+""2020-09-25 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/policy/getAll", parameters={}
+""2020-09-25 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.cybage.genworth.insurance.controller.PolicyController#getAllPolicy()
+""2020-09-25 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json] and supported [application/json]
+""2020-09-25 [http-nio-8081-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[Policy [id=1, policynumber=1236, premiumamount=4000, name=ram, email=ram@gmail.com, mobileno=889897 (truncated)...]
+""2020-09-25 [http-nio-8081-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+"

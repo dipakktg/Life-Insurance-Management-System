@@ -1,0 +1,74 @@
+
+  <mat-card-header>
+    <mat-card-title>{{title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mb-0 px-1">
+    <form ngClass.gt-xs="px-1" #formControl="ngForm">
+      <div fxLayout="row" fxLayoutWrap="wrap">
+        <div fxFlex="100" fxFlex.gt-md="100" ngClass.gt-md="pr-1">
+          <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+            <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+  
+              <input matInput minlength="2" maxlength="30" placeholder="Username" [(ngModel)]="policy.name" name="name" type="text" #box
+              (keyup.enter)="update(box.value)"
+              (blur)="update(box.value)" required #name="ngModel">
+              <mat-error [hidden]="name.valid || name.pristine"
+              class="alert alert-danger">
+                User Name is required
+            </mat-error>
+  
+            </mat-form-field>
+            <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+              <input matInput minlength="2" maxlength="30" placeholder="Email" [formControl]="email" [(ngModel)]="policy.email" name="email" type="email" #box2
+              (keyup.enter)="checkEmail(box2.value)"
+              (blur)="checkEmail(box2.value)" required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <mat-error *ngIf="checkedUsername">Username already taken by someone.</mat-error>
+          <mat-error *ngIf="checkedUseremail">Already have account with this email.</mat-error>
+          <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+            <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+              <input matInput minlength="2" maxlength="30" placeholder="Policy Number" type="text" [(ngModel)]="policy.policyNumber" name="policyNumber" required #policyNumber="ngModel">
+                <mat-error [hidden]="policyNumber.valid || policyNumber.pristine"
+                  class="alert alert-danger">
+                  Policy Number is required
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+              <input matInput minlength="2" maxlength="30" placeholder="Claim Number" type="text" [(ngModel)]="policy.claimNumber" name="claimNumber" required #claimNumber="ngModel">
+                <mat-error [hidden]="claimNumber.valid || claimNumber.pristine"
+                  class="alert alert-danger">
+                    Claim Number is required
+                </mat-error>
+            </mat-form-field>
+          </div>
+        
+          <br/>
+         <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex="100" fxFlex.gt-md="100" ngClass.gt-md="pr-1">
+              <div>
+                <label class="mr-1 mat-body-3">Status:</label>
+                <mat-radio-group fxFlex="100" fxLayoutGap=".5rem" [(ngModel)]="policy.status" name="status" required>
+                  <mat-radio-button value="Active">Active</mat-radio-button>
+                  <mat-radio-button value="InActive">InActive</mat-radio-button>
+                  <mat-radio-button value="Other">Other</mat-radio-button>
+                </mat-radio-group>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <br/>
+      <div class="ptb-5 mb-1">
+        <button mat-raised-button color="primary" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="true" class="mr-1"  (click)="confirmAdd()">Submit</button>
+        <button mat-raised-button color="accent" (click)="onNoClick()" tabindex="" x="-1">Cancel</button>
+      </div>
+    </form>
+    <!-- {{userName}} -->
+  </mat-card-content>
+  <!-- </mat-card> -->
+  <!-- </div>
+    </div> -->

@@ -1,0 +1,42 @@
+<perfect-scrollbar>
+  <div class="sidebar-left" fxLayout="column">
+    <div class="branding mat-brand-bg mat-elevation-z1">
+      <div class="p-1">
+        <div class="font--20 mb-0">Life Insurance</div>
+        <div class="user mb-12" fxLayout="row" fxLayoutAlign="start center">
+          <div>
+      
+            <div></div>
+            <div class="mat-h5 mb-0"></div>
+          </div>
+          <span fxFlex></span>
+          <div class="user__photo">
+      
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-nav-list (click)="hideSubmenu($event)">
+      <div class="menu__list mb-1">
+
+          <mat-list-item class="menu__item" sidenavAccordian>
+            <a fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon>dashboard</mat-icon>
+              <span>Life Insurance</span>
+              <span fxFlex></span>
+              <mat-icon class="menu-caret">keyboard_arrow_down</mat-icon>
+            </a>
+      
+          <mat-nav-list class="menu__submenu">
+            <mat-list-item>
+              <a fxLayout="row" routerLink="policy">
+                <span>Policy</span>
+              </a>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-list-item> 
+
+      </div>
+    </mat-nav-list>
+  </div>
+</perfect-scrollbar>

@@ -1,0 +1,320 @@
+<div fxLayout="column">
+</div>
+<!-- <div fxLayout="row" fxLayoutWrap="wrap">
+  <div fxFlex.xs="100" fxFlex.lg="25" fxFlex.lt-lg="50">
+    <mat-card class="default">
+      <mat-card-content fxLayoutAlign="start center">
+        <div class="p-1">
+          <mat-card-subtitle class="mb-0">Total Orders</mat-card-subtitle>
+          <h3 class="mat-h3--light m-0">200</h3>
+        </div>
+        <span fxFlex></span>
+      <mat-card class="mat-bg--primary mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+          <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
+      </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex.xs="100" fxFlex.lg="25" fxFlex.lt-lg="50">
+    <mat-card class="default">
+      <mat-card-content fxLayoutAlign="start center">
+        <div class="p-1">
+          <mat-card-subtitle class="mb-0">Total Sale</mat-card-subtitle>
+          <h3 class="mat-h3--light m-0">11,200</h3>
+        </div>
+        <span fxFlex></span>
+        <mat-card class="mat-bg--accent mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+          <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex.xs="100" fxFlex.lg="25" fxFlex.lt-lg="50">
+    <mat-card class="default">
+      <mat-card-content fxLayoutAlign="start center">
+        <div class="p-1">
+          <mat-card-subtitle class="mb-0">Total Customers</mat-card-subtitle>
+          <h3 class="mat-h3--light m-0">98</h3>
+        </div>
+        <span fxFlex></span>
+        <mat-card class="mat-bg--accent mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+          <mat-icon>trending_up</mat-icon><span class="ml-2">20%</span>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex.xs="100" fxFlex.lg="25" fxFlex.lt-lg="50">
+    <mat-card class="default">
+      <mat-card-content fxLayoutAlign="start center">
+        <div class="p-1">
+          <mat-card-subtitle class="mb-0">Total Visits</mat-card-subtitle>
+          <h3 class="mat-h3--light m-0">1900</h3>
+        </div>
+        <span fxFlex></span>
+        <mat-card class="mat-bg--warn mr-1 mt-0 plr-10 ptb-5" fxLayoutAlign="center center">
+          <mat-icon>trending_up </mat-icon><span class="ml-2">20%</span>
+        </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout.lt-lg="column">
+  <div fxFlex="100" fxFlex.gt-md="50">
+    <mat-card>
+     <mat-card-content>
+      <canvas baseChart #pieChart="base-chart" height="150"
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="100" fxFlex.gt-md="50">
+    <mat-card>
+      <mat-card-content>
+      <canvas baseChart #lineChart="base-chart" height="150"
+        [data]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [chartType]="lineChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+<div fxLayout.lt-md="column">
+  <div fxFlex="100" fxFlex.gt-md="33.33" fxLayout="Column">
+    <mat-card class="p-0 custom__card">
+        <mat-card-title class="mb-0" fxLayoutAlign="start center">
+          <p class="mb-0 font--20">Top Performers</p>
+          <span fxFlex></span>
+          <button mat-icon-button [matMenuTriggerFor]="progressBar">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #progressBar="matMenu">
+            <button mat-menu-item>
+            <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+          <button mat-menu-item>
+            <mat-icon>email</mat-icon><span>Inbox</span></button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+          </mat-menu>
+        </mat-card-title>
+         <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="mb-1">
+         <p>John Doe</p>
+         <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Jane Doe</p>
+         <mat-progress-bar mode="determinate" value="60" color="accent"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Jude Doe</p>
+         <mat-progress-bar mode="determinate" color="warn" value="80"></mat-progress-bar>
+        </div>
+        <div class="mb-1">
+         <p>Jerry Doe</p>
+         <mat-progress-bar mode="determinate" value="60"></mat-progress-bar>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="p-0 custom__card">
+        <mat-card-title class="mb-0" fxLayoutAlign="start center">
+          <p class="font--20 mb-0">Messages</p>
+          <span fxFlex></span>
+          <button mat-icon-button>
+            <mat-icon>cached</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="gallerySetting">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #gallerySetting="matMenu">
+            <button mat-menu-item>
+            <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+          <button mat-menu-item>
+            <mat-icon>email</mat-icon><span>Inbox</span></button>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+          </mat-menu>
+        </mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mb-0 p-0">
+          <perfect-scrollbar>
+            <div [style.max-height]="'300px'">
+              <mat-list class="p-0 pointer--cursor">
+                <mat-list-item>
+                  <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                  <h4 mat-line>Tile with avatar</h4>
+                  <p mat-line>bushwick man bun pok pok shoreditch </p>
+                </mat-list-item>
+                <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+                  <mat-list-item>
+                    <img mat-list-avatar src="assets/images/card-avatar.png" alt="">
+                    <h4 mat-line>Tile with avatar</h4>
+                    <p mat-line>bushwick man bun pok pok shoreditch </p>
+                  </mat-list-item>
+              </mat-list>
+            </div>
+          </perfect-scrollbar>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+          <a class="pointer--cursor mat-body-1">View All</a>
+        </mat-card-footer>
+      </mat-card>
+  </div>
+
+  <div fxFlex="100" fxFlex.gt-md="66.66">
+    <mat-card class="custom__card p-0 list--scroll">
+        <mat-card-title  class="mb-0" fxLayoutAlign="start center">
+          <p class="font--20 mb-0">Latest Activities</p>
+        </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-card-content class="mb-0 p-0">
+       <mat-list>
+         <mat-list-item>
+            <mat-checkbox>  
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/avataar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+             <div class="m-0" fxFlex="40" fxFlex.sm="60">Rob Flower</div>
+             <div fxFlex="40" fxFlex.sm="60">Bought a pen drive...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="active" selected="true">active</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+            <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+             <div class="m-0" fxFlex="40" fxFlex.sm="60">Matt Bell</div>
+             <div fxFlex="40" fxFlex.sm="60">Bought a TV...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="primary" selected="true">active</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+           <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>  
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+             <div class="m-0" fxFlex="40" fxFlex.sm="60">Shawn Fleming</div>
+             <div fxFlex="40" fxFlex.sm="60">Went to watch a movie...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="warn" selected="true">closed</mat-chip>
+         </mat-list-item>
+         <mat-list-item>
+            <mat-checkbox>
+              <img class="mr-1 ml-1" mat-list-avatar src="assets/images/card-avatar.png" fxLayoutAlign="start center">
+            </mat-checkbox>
+           <div fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+             <div class="m-0" fxFlex="40" fxFlex.sm="60">Nathan Tall</div>
+             <div fxFlex="40" fxFlex.sm="60">Went shopping with Jane Doe...</div>
+             <span fxFlex></span>
+             <small class="mr-1">4 months ago</small>
+           </div>
+           <mat-chip color="warn" selected="true">closed</mat-chip>
+         </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+        <a class="pointer--cursor mat-body-1">View All</a>
+      </mat-card-footer>
+    </mat-card>
+
+    <div fxLayout="row" fxLayoutWrap="wrap">
+      <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
+          <mat-card class="p-0 custom__card">
+              <mat-card-title class="mb-0" fxLayoutAlign="start center">
+                <p class="font--20 mb-0">Gallery</p>
+                <span fxFlex></span>
+                <button mat-icon-button>
+                  <mat-icon>cached</mat-icon>
+                </button>
+                <button mat-icon-button [matMenuTriggerFor]="gallerySetting">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #gallerySetting="matMenu">
+                  <button mat-menu-item>
+                  <mat-icon>account_circle</mat-icon><span>My Profile</span></button>
+                <button mat-menu-item>
+                  <mat-icon>email</mat-icon><span>Inbox</span></button>
+                <button mat-menu-item>
+                  <mat-icon>exit_to_app</mat-icon><span>Logout</span></button>
+                </mat-menu>
+              </mat-card-title>
+              <mat-divider></mat-divider>
+              <mat-card-content class="mb-0 p-0 p-3">
+                <perfect-scrollbar>
+                  <div [style.max-height]="'380px'">
+                    <mat-grid-list cols="4" rowHeight="1:1" gutterSize="3px">
+                      <mat-grid-tile *ngFor="let image of images" > <img src="{{image.url}}" #image1 (click)="openDialog(image)"></mat-grid-tile>
+                    </mat-grid-list>
+                  </div>
+                </perfect-scrollbar>
+              </mat-card-content>
+              <mat-divider></mat-divider>
+              <mat-card-footer class="m-0 custom__card__footer" fxLayoutAlign="center center">
+                <a class="pointer--cursor mat-body-1">View All</a>
+              </mat-card-footer>
+            </mat-card>
+      </div>
+      <div fxFlex="100" fxFlex.gt-md="50" fxFlex.lt-md="100">
+        <mat-card class="p-0 custom__card">
+          
+          <div class="image--overlay">
+              <img mat-card-image src="assets/images/gallery04.jpg" alt="Photo of a Shiba Inu" [style.height]="'250px'" class="mb-0">
+              <h2 class="card__title overlay">Man bun tacos</h2>
+          </div>
+          <mat-card-content class="mb-0">
+              <div class="mat-caption mat-hint mb-1">01/11/2018</div>
+              <p>Vice deep v bushwick man bun pok pok shoreditch hoodie, neutra everyday carry marfa austin. Tousled portland pok pok helvetica venmo, lyft chartreuse vaporware. Chicharrones fingerstache vice mlkshk.
+                 Tilde glossier organic vaporware la croix, kombucha green juice enamel pin. YOLO woke hashtag tacos shoreditch. Poutine tilde lomo cred.</p>
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions class="custom__card__actions">
+            <button mat-button class="mat-body">Read More</button>
+            <span fxFlex></span>
+            <button mat-icon-button><mat-icon>favorite</mat-icon></button>
+            <button mat-icon-button><mat-icon>bookmark_border</mat-icon></button>
+            <button mat-icon-button><mat-icon>share</mat-icon></button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div> 
+    
+  </div>
+</div>
+
+ -->

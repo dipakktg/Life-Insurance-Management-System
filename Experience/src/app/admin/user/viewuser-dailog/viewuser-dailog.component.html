@@ -1,0 +1,80 @@
+<!-- <div>
+    <div fxLayout="column"> -->
+    <!-- <mat-card class="default"> -->
+      <mat-card-header>
+        <mat-card-title>View User</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mb-0 px-1">
+        <form ngClass.gt-xs="px-1" #formControl="ngForm">
+          <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex="100" fxFlex.gt-md="100" ngClass.gt-md="pr-1">
+              <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+                <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50" >
+                      <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" type="text" readonly>
+                </mat-form-field>
+                <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                  <input matInput placeholder="Email" [(ngModel)]="user.useremail" name="useremail" type="email" readonly>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+                  <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50" >
+                    <input matInput placeholder="First Name" type="text" [(ngModel)]="user.firstname" name="firstname" readonly>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                    <input matInput placeholder="Last Name" type="text" [(ngModel)]="user.lastname" name="lastname" readonly>
+                  </mat-form-field>
+                </div>
+              <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+                  <mat-form-field fxFlex="100" fxFlex.gt-xs="32" >
+                    <input matInput placeholder="Street No" type="text" [(ngModel)]="user.streetno" name="streetno" readonly>
+                  </mat-form-field>
+                  <mat-form-field fxFlex="100" fxFlex.gt-xs="32">
+                    <input matInput placeholder="Street Name" type="text" [(ngModel)]="user.streetname" name="streetname" readonly>
+                  </mat-form-field>
+                  <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                      <input matInput placeholder="City" type="text" [(ngModel)]="user.city" name="city" type="text" readonly>
+                  </mat-form-field>
+              </div>
+              <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+                <mat-form-field fxFlex.gt-xs="32" fxFlex="100" >
+                  <input matInput placeholder="Country" [(ngModel)]="user.country" name="country" type="text" readonly>
+                </mat-form-field>
+                <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                  <input matInput placeholder="State"  [(ngModel)]="user.province" name="province" type="text" readonly>
+                </mat-form-field>
+                <mat-form-field fxFlex.gt-xs="32" fxFlex="100">
+                  <input matInput #postalCode maxlength="5" placeholder="Postal Code" [(ngModel)]="user.postalcode" name="postalcode" type="text" readonly>
+                </mat-form-field>
+              </div>
+              <div fxLayoutAlign.gt-xs="space-between start" fxLayout.xs="column">
+                  <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50" >
+                      <input matInput placeholder="Contact No" type="text" [(ngModel)]="user.contactno" name="contactno" type="text" readonly>
+                </mat-form-field>
+                  <!-- <mat-form-field fxFlex="100" fxFlex.gt-xs="48.50">
+                    <input matInput placeholder="User Role" type="text" [(ngModel)]="user.userrole" type="text" readonly>
+                  </mat-form-field> -->
+                </div>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutWrap="wrap">
+            <div fxFlex="100" fxFlex.gt-md="100" ngClass.gt-md="pr-1">
+                <div>
+                  <label class="mr-1 mat-body-3">Gender:</label>
+                  <mat-radio-group fxFlex="100" fxLayoutGap=".5rem" [(ngModel)]="user.gender" name="gender">
+                    <mat-radio-button value="M">Male</mat-radio-button>
+                    <mat-radio-button value="F">Female</mat-radio-button>
+                    <mat-radio-button value="O">Other</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+            </div>
+          </div>
+          <br/>
+          <div class="ptb-5 mb-1">
+            <button mat-raised-button color="accent" (click)="onNoClick()"  tabindex="" x="-1">Cancel</button>
+          </div>
+        </form>
+      </mat-card-content>
+    <!-- </mat-card> -->
+  <!-- </div>
+  </div> -->
+  
